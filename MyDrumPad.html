@@ -1,0 +1,190 @@
+<!-- Made By Indrayani 
+Hey, Thanks for viewing this code. It is my first code on GitHub! I hope you like it!
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>drumpad</title>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    * {
+     margin:0;
+     padding:0;
+ }
+body {
+    background-color:rgb(250,20,100);
+    
+}
+h1 {
+    text-align:center;
+    font-size:80px;
+    font-weight:100;
+    text-shadow: 1px 2px white;
+}
+#p1 {
+    text-align:center;
+    font-weight:200;
+    font-size:30px;
+    color:white;
+    margin-top:20px;
+    padding-bottom:0px;
+}
+#p2 {
+    text-align:center;
+    font-weight:200;
+    font-size:30px;
+    margin-top:530px;
+}
+#p3 {
+    text-align:center;
+    font-weight:400;
+    font-size:10px;
+    font-style:italic;
+}
+#drum {
+    margin-top:60px;
+    margin-left:10px;
+    padding-left:20px;
+    padding-top:15px;
+    width:350px;
+    background-color:blue;
+    height:350px;
+    border-radius:24px;
+    position:absolute;
+    
+}
+.row1 span {
+    border-radius:24px;
+    width:100px;
+    height:100px;
+    margin:5px;
+    background-color:black;
+    display:block;
+    float:left;
+    box-shadow:1px 2px white;
+    position:relative ;
+}
+
+.row2 span {
+    border-radius:24px;
+    width:100px;
+    height:100px;
+    margin:5px;
+    box-shadow:1px 2px white;
+    background-color:black;
+    float:left;
+    display:block;
+    position:relative ;
+    }
+    
+span:hover {
+    background-color:yellow;
+}
+.name {
+    text-align:center;
+    font-size:50px;
+    margin-top:20px;
+    color: #fff;
+    font-weight:300;
+    text-shadow: 2px 3px black;
+}
+.name span {
+
+  position: relative;
+  display: inline-block;
+
+  text-transform: uppercase;
+  animation: drumpad 1s infinite;
+  animation-delay: calc(0.1s * var(--t));
+  margin-top: -50px;
+}
+@keyframes drumpad {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(10px);
+  }
+}
+
+
+
+  </style>
+</head>
+
+<body>
+<audio class="audio" id="a">
+          <source src="https://www.dropbox.com/s/if0w5kzoyxcojib/mixkit-drum-bass-hit-2294.wav?dl=1">
+        </audio>
+        <audio class="audio" id="b">
+          <source src="https://dl.dropbox.com/s/7zdfij17j915zgn/instrument-for-music-tech-96034.mp3">
+        </audio>
+        <audio class="audio" id="c">
+          <source src="https://dl.dropbox.com/s/zc502ord8fsl65a/mixkit-hand-tribal-drum-562.wav">
+        </audio>
+        <audio class="audio" id="d">
+          <source src="https://dl.dropbox.com/s/v0gh7mtbv6jph7a/four.wav">
+        </audio>
+        <audio class="audio" id="e">
+          <source src="https://www.dropbox.com/s/lpsv52hfwq04hmn/e.wav?dl=1">
+        </audio>
+        <audio class="audio" id="f">
+          <source src="https://www.dropbox.com/s/b60cai5egyrvicw/f.wav?dl=1">
+        </audio>
+        <audio class="audio" id="g">
+          <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3">
+        </audio>
+        <audio class="audio" id="h">
+          <source src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3">
+        </audio>
+        <audio class="audio" id="i">
+          <source src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3">
+        </audio>
+        <div class="name">
+          <span style="--t: 1">D</span>
+          <span style="--t: 2">R</span>
+          <span style="--t: 3">U</span>
+          <span style="--t: 4">M</span>
+          <span style="--t: 5">P</span>
+          <span style="--t: 6">A</span>
+          <span style="--t: 7">D</span>
+        </div>
+        <p id="p1">A mini version</p>
+        <div id="drum">
+          <div class="row1">
+            <span onclick="beat('a')"></span>
+            <span onclick="beat('b')"></span>
+            <span onclick="beat('c')"></span>
+            <span onclick="beat('d')"></span>
+          </div>
+          <div class="row2">
+            <span onclick="beat('e')"></span>
+            <span onclick="beat('f')"></span>
+            <span onclick="beat('g')"></span>
+            <span onclick="beat('h')"></span>
+            <span onclick="beat('i')"></span>
+          </div>
+        
+        </div>
+        
+        <p id="p2">made by ◦•●◉✿𝕀ℕ𝔻𝕀✿◉●•◦</p>
+        <p id="p3">ALL THE SOUNDS BELONG TO THEIR RIGHTFUL OWNERS</p>
+    <script>
+      function beat(audio) { 
+  var x = document.getElementById(audio); 
+  x.play(); 
+}
+alert("Sometimes you will have to wait for the sound/music to load, probably because of slow internet\n\n\n\t\t\t\t\t ✨UPVOTE IF YOU LIKE✨")
+    </script>
+</body>
+</html>
